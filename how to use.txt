@@ -1,0 +1,67 @@
+so how does this shit work? It's simple my good chap, you simply place AfterTheEnd into your gamemodes folder (garrysmod/gamemodes)
+
+
+you will need to install these addons:
+https://steamcommunity.com/sharedfiles/filedetails/?id=247962324 (stalker playermodels for the built in armors)
+http://steamcommunity.com/sharedfiles/filedetails/?id=411284648 (gamemode content pack, basically just contains zombie models and suchlike)
+http://steamcommunity.com/sharedfiles/filedetails/?id=448170926 (gamemode sweps pack)
+
+WARNING: IF YOU ARE USING THE DEFAULT SWEPS PACK YOU WILL ABSOLUTELY NEED TO HAVE M9K SMALL ARMS, ASSAULT RIFLES AND HEAVY WEAPONS INSTALLED
+a lot of the default sweps use models and sounds from the m9k pack and will be errors if you dont have m9k installed on your server
+m9k specialties is not required
+
+
+===================================================================================
+
+This gamemode requires these things three:
+
+1. Your map must have a navmesh as the zombies are nextbots (google gmod navmesh if you dont know what this is or how to make one)
+
+2. Your server must have counter strike source mounted
+
+3. You need to create a config file for you map, this is literally as simple as going ingame and using these 3 commands:
+ate_addzombiespawn - creates spawnpoints for the zombies to appear at
+ate_addtrader - creates traders, you can type ate_refreshtraders to make them appear instantly
+ate_addlootspawn - creates spawnpoints for the ingame loot caches, try to hide them well to give your players a challenge
+
+if you mess something up you can use:
+ate_clearzombiespawns
+ate_cleartraderspawns
+ate_clearlootspawns
+
+a better config setup system will most likely be added in future but for now it works well enough.
+
+
+
+Thats all!
+If you have these bases covered then the gamemode should work right out of the box
+
+
+===================================================================================
+
+Adding custom content:
+Adding your own items and weapons is as easy as it gets, all you need to do is edit 3 files within the gamemodes root folder.
+
+sh_items.lua - handles all ingame items, if you aren't sure what your doing then read over the existing items and see how they work.
+
+sh_loot.lua - loot tables, determines what can be dropped from who or where
+
+sh_spawnables.lua - controls which props and structures are available for players to build
+
+
+
+===================================================================================
+
+Admin commands:
+
+admin commands are pretty rudimentary at the moment, expect better support for admins in future
+current commands are:
+
+ate_admin_giveitem "name" "amount"          eg. zw_admin_giveitem zw_rifleammo 3       - gives you the corresponding item
+ate_admin_givecash "amount" - gives you cash moneys -- edit: whoops, i had it as giveadars before which was incorrect, sorry guys
+
+ate_admin_clearzombies "force"  - deletes all regular zombies if force is false or not inputted, deletes all nextbots including bosses if you type force after the command
+
+
+
+

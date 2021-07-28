@@ -1,0 +1,33 @@
+"Gamemode"
+{
+	"base"		""
+	"title"		"After The End"
+	"maps"		"zw_"
+	"menusystem"	"1"
+	"workshopid"	"56665"
+
+	"settings"
+	{
+		1
+		{
+			"name"		"After The End"
+			"text"		"After The End"
+			"help"		"Kill Zombies!"
+			"type"		"wat"
+			"default"	"0"
+		}
+
+
+		
+		2
+		{
+			"name"		"sk_grenades"
+			"text"		"Allow Grenades"
+			"help"		"If enabled ) then grenades are enabled"
+			"type"		"checkbox"
+			"default"	"1"
+		}
+
+	}
+
+}
